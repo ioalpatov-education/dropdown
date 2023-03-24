@@ -1,3 +1,5 @@
+import DropdownList from "./DropdownList";
+
 const Dropdown = () => {
   return (
     <div className="container">
@@ -6,23 +8,8 @@ const Dropdown = () => {
           <span>Account Settings</span>
           <i className="material-icons">public</i>
         </button>
-        <ul data-id="dropdown" className="dropdown">
-          <li className="active">
-            <a href="#">Profile Information</a>
-          </li>
-          <li>
-            <a href="#">Change Password</a>
-          </li>
-          <li>
-            <a href="#">Become PRO</a>
-          </li>
-          <li>
-            <a href="#">Help</a>
-          </li>
-          <li>
-            <a href="#">Log Out</a>
-          </li>
-        </ul>
+
+        <DropdownList />
       </div>
     </div>
   );
