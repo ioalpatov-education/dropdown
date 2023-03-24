@@ -1,7 +1,15 @@
 import PropTypes from "prop-types";
+import DropdownItem from "./DropdownItem";
 
 const DropdownList = ({ items }) => {
-  return <ul data-id="dropdown" className="dropdown"></ul>;
+  const dropdownItems = items.map((item, itemIdx) => {
+    return <DropdownItem key={itemIdx} item={item} />;
+  });
+  return (
+    <ul data-id="dropdown" className="dropdown">
+      {dropdownItems}
+    </ul>
+  );
 };
 
 DropdownList.propTypes = {
