@@ -1,16 +1,25 @@
 import PropTypes from "prop-types";
+import { useState } from "react";
 import DropdownList from "./DropdownList";
 
 const Dropdown = ({ text, items }) => {
+  const [isShowList, setIsShowList] = useState(false);
+
+  const toggleDropdown = () => {
+    setIsShowList(!isShowList);
+  };
+
+  const list = isShowList ? <DropdownList items={items} /> : null;
+
   return (
     <div className="container">
       <div data-id="wrapper" className="dropdown-wrapper open">
-        <button data-id="toggle" className="btn">
+        <button data-id="toggle" className="btn" onClick={toggleDropdown}>
           <span>{text}</span>
           <i className="material-icons">public</i>
         </button>
 
-        <DropdownList items={items} />
+        {list}
       </div>
     </div>
   );
