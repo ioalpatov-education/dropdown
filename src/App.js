@@ -2,11 +2,11 @@ import "./App.css";
 import Dropdown from "./components/Dropdown";
 
 const items = [
-  "Profile Information",
-  "Change Password",
-  "Become PRO",
-  "Help",
-  "Log Out",
+  { text: "Profile Information", link: "#" },
+  { text: "Change Password", link: "#" },
+  { text: "Become PRO", link: "#" },
+  { text: "Help", link: "#" },
+  { text: "Log Out", link: "#" },
 ];
 
 function App() {
