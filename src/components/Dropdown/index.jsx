@@ -11,9 +11,13 @@ const Dropdown = ({ text, items }) => {
 
   const list = isShowList ? <DropdownList items={items} /> : null;
 
+  const wrapperClasses = isShowList
+    ? "dropdown-wrapper open"
+    : "dropdown-wrapper";
+
   return (
     <div className="container">
-      <div data-id="wrapper" className="dropdown-wrapper open">
+      <div data-id="wrapper" className={wrapperClasses}>
         <button data-id="toggle" className="btn" onClick={toggleDropdown}>
           <span>{text}</span>
           <i className="material-icons">public</i>
